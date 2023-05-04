@@ -51,7 +51,7 @@ int main() {
     t1 = steady_clock::now();
     // codigo
     t2 = steady_clock::now();
-    double tempo = duration_cast<duration<double>>(t2 - t1).count();
+    double tempo = duration_cast<duration<double>>(t2 - t1).count(); // calcula tempo de execucao
 
     string str_M = "Possui caractereS MAiuscUlos";
     tolowerStr(str_M); // converte string para minusculo
