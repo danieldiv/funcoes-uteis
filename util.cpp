@@ -31,17 +31,15 @@ int main() {
     int val = c - '0'; // converte char para int
 
     unordered_map<string, int> map;
-
     map.insert({ { "a", 91 }, { "b", 21 }, { "c", 312 } });
-
-    for (const auto &[key, value] : map) { cout << key << " " << value << endl; } // iterador constante (apenas leitura)
 
     vector<std::pair<string, int>> arr;
     for (const auto &item : map)
         arr.emplace_back(item); // cria vector sem precisar de variavel auxiliar
 
     std::sort(arr.begin(), arr.end(),
-        [](const auto &x, const auto &y) {return x.second > y.second; }); // ordena por valor
+        [](const auto &x, const auto &y) {return x.second < y.second; }); // ordena por valor
+    for (const auto &[key, value] : arr) { cout << key << " " << value << endl; }
 
     steady_clock::time_point t1;
     steady_clock::time_point t2;
