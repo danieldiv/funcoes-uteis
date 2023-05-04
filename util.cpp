@@ -15,6 +15,9 @@ using namespace std::chrono;
 
 using type_map = unordered_map<int, pair<string, pair<float, float>>>; // alias para unordered_map
 
+#define loopStr(str) for (long unsigned d_inc = 0; d_inc < str.length(); d_inc++)
+#define tolowerStr(str) loopStr(str) str[d_inc] = tolower(str[d_inc])
+
 int main() {
 
     vector<int> vec;
@@ -48,6 +51,9 @@ int main() {
     // codigo
     t2 = steady_clock::now();
     double tempo = duration_cast<duration<double>>(t2 - t1).count();
+
+    string str_M = "Possui caractereS MAiuscUlos";
+    tolowerStr(str_M); // converte string para minusculo
 
     return 0;
 }
