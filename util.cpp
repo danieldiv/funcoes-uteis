@@ -1,4 +1,4 @@
-// g++ -o res util.cpp && ./res
+// g++ -o res util.cpp && ./res // compila e executa
 
 #include <unordered_map>
 #include <algorithm>
