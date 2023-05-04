@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -54,6 +55,11 @@ int main() {
 
     string str_M = "Possui caractereS MAiuscUlos";
     tolowerStr(str_M); // converte string para minusculo
+
+    stringstream sstream(str_M);
+    string token;
+
+    while (getline(sstream, token, ' ')) { cout << token << endl; } // separa string por espaco
 
     return 0;
 }
