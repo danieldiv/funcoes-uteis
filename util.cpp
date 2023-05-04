@@ -32,9 +32,7 @@ int main() {
 
     unordered_map<string, int> map;
 
-    map.insert({ "a", 91 });
-    map.insert({ "b", 21 });
-    map.insert({ "c", 312 });
+    map.insert({ { "a", 91 }, { "b", 21 }, { "c", 312 } });
 
     for (const auto &[key, value] : map) { cout << key << " " << value << endl; } // iterador constante (apenas leitura)
 
