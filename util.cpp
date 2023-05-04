@@ -10,7 +10,6 @@
 #include <ctime>
 #include <ratio>
 
-
 using namespace std;
 using namespace std::chrono;
 
@@ -25,10 +24,8 @@ int main() {
     for (auto it = vec.rbegin(); it != vec.rend(); ++it) { cout << *it << endl; } // iterador reverso
 
     string str = "string para teste";
-
-    for (auto it = str.begin(); it != str.end(); ++it) { cout << *it << endl; } // iterador normal
-
     string sub_str = str.substr(0, 6); // pega substring
+    for (auto it = str.begin(); it != str.end(); ++it) { cout << *it << endl; } // iterador normal
 
     char c = '5';
     int val = c - '0'; // converte char para int
